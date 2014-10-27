@@ -5,13 +5,11 @@ module top (
   input         data,
   output  [2:0] out
   );
+	
+	divider divider0( .clk(clk),
+					.rst_n(rst_n),
+					.data(data),
+					.previous(out),
+					.out(out));
 
-  divider divider0( .clk(clk),
-                    .rst_n(rst_n),
-                    .data(data),
-                    .out(out));
-  
 endmodule
-
-
-
