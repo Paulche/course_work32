@@ -6,12 +6,12 @@ module top (
   output  [2:0] out
   );
 
-  divider divider0( .clk(clk),
-                    .rst_n(rst_n),
-                    .data(data),
-                    .out(out));
-  
+	reg	[2:0]	previous;
+	
+	divider divider0( .clk(clk),
+					.rst_n(rst_n),
+					.data(data),
+					.previous(previous),
+					.out(out));
+
 endmodule
-
-
-
